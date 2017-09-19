@@ -23,22 +23,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ECd-BT-yeW">
-                                <rect key="frame" x="80" y="318" width="215" height="30"/>
+                                <rect key="frame" x="61" y="314" width="253" height="40"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mfB-u6-bee">
-                                        <rect key="frame" x="0.0" y="0.0" width="105" height="30"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Open web view">
-                                            <color key="titleShadowColor" red="0.29803921570000003" green="0.57254901960000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mfB-u6-bee">
+                                        <rect key="frame" x="0.0" y="0.0" width="65" height="40"/>
+                                        <color key="backgroundColor" red="1" green="0.40784313729999999" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <size key="titleShadowOffset" width="0.0" height="1"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Game">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.98297869001753657" green="1" blue="0.1568199076253235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="24" name="ArialUnicodeMS"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
                                         </state>
                                         <connections>
                                             <segue destination="ZcY-36-yIT" kind="show" id="Nzm-Gc-cNT"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqD-ub-qd7">
-                                        <rect key="frame" x="115" y="0.0" width="100" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zqD-ub-qd7">
+                                        <rect key="frame" x="75" y="0.0" width="178" height="40"/>
                                         <color key="backgroundColor" red="1" green="0.7725490196" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Open in modal"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Injected Content">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.29803921570000003" green="0.57254901960000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="24" name="ArialUnicodeMS"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
                                         <connections>
                                             <segue destination="T4t-JP-oWB" kind="presentation" id="7tB-mK-iDh"/>
                                         </connections>
@@ -52,6 +69,10 @@
                             <constraint firstItem="ECd-BT-yeW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hXy-1I-OUr"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="gameButton" destination="mfB-u6-bee" id="DIq-3n-Rpg"/>
+                        <outlet property="injectionButton" destination="zqD-ub-qd7" id="09d-iI-dwO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -78,9 +99,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="containerView" destination="qeL-ZQ-E03" id="syt-9Z-003"/>
-                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1735" y="133"/>
@@ -112,6 +130,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="GR5-Dc-mpx"/>
+                    <connections>
+                        <outlet property="contentView" destination="zO0-bY-QIe" id="b1f-l8-6Mt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bc3-09-HO1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
