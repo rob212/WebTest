@@ -14,6 +14,8 @@
 		70FC76711F6F154E007948AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70FC766F1F6F154E007948AD /* LaunchScreen.storyboard */; };
 		70FC76791F6F162C007948AD /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FC76781F6F162C007948AD /* WebViewController.swift */; };
 		70FC767B1F702577007948AD /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FC767A1F702577007948AD /* ModalViewController.swift */; };
+		70FC767D1F711B59007948AD /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 70FC767C1F711B59007948AD /* index.html */; };
+		70FC767F1F711B5D007948AD /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = 70FC767E1F711B5D007948AD /* main.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		70FC76721F6F154E007948AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70FC76781F6F162C007948AD /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		70FC767A1F702577007948AD /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
+		70FC767C1F711B59007948AD /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		70FC767E1F711B5D007948AD /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = main.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				70FC76721F6F154E007948AD /* Info.plist */,
 				70FC76781F6F162C007948AD /* WebViewController.swift */,
 				70FC767A1F702577007948AD /* ModalViewController.swift */,
+				70FC767C1F711B59007948AD /* index.html */,
+				70FC767E1F711B5D007948AD /* main.js */,
 			);
 			path = WebTest;
 			sourceTree = "<group>";
@@ -131,8 +137,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				70FC76711F6F154E007948AD /* LaunchScreen.storyboard in Resources */,
+				70FC767D1F711B59007948AD /* index.html in Resources */,
 				70FC766E1F6F154E007948AD /* Assets.xcassets in Resources */,
 				70FC766C1F6F154E007948AD /* Main.storyboard in Resources */,
+				70FC767F1F711B5D007948AD /* main.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

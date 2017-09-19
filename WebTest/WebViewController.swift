@@ -20,17 +20,37 @@ class WebViewController: UIViewController, WKNavigationDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        webView = WKWebView()
-        webView?.navigationDelegate = self
-        self.view = webView
-        let url = URL(string: "http://www.emanueleferonato.com/wp-content/uploads/2017/08/flipping/")!
-        webView?.load(URLRequest(url: url))
-        webView?.allowsBackForwardNavigationGestures = false
+        setupView()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
 }
+    
+    fileprivate func setupView() {
+        let config = generateWebViewConfiguration()
+        webView = WKWebView(frame: self.containerView.bounds, configuration: config)
+        webView?.navigationDelegate = self
+        self.view = webView
+        let url = URL(fileURLWithPath: Bundle.main.path(forResource: "index", ofType: "html")!)
+        webView?.load(URLRequest(url: url))
+        webView?.allowsBackForwardNavigationGestures = false
+    }
+    
+    fileprivate func generateWebViewConfiguration() -> WKWebViewConfiguration {
+        let contentController = WKUserContentController()
+        let userScript = WKUserScript(
+            source: "redHeader()",
+            injectionTime: WKUserScriptInjectionTime.atDocumentEnd,
+            forMainFrameOnly: true
+        )
+        contentController.addUserScript(userScript)
+        
+        let config = WKWebViewConfiguration()
+        config.userContentController = contentController
+        return config
+    }
+    
 
 }
