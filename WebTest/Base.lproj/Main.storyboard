@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16G18a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WebTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ECd-BT-yeW">
+                                <rect key="frame" x="80" y="318" width="215" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mfB-u6-bee">
+                                        <rect key="frame" x="0.0" y="0.0" width="105" height="30"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Open web view">
+                                            <color key="titleShadowColor" red="0.29803921570000003" green="0.57254901960000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="ZcY-36-yIT" kind="show" id="Nzm-Gc-cNT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqD-ub-qd7">
+                                        <rect key="frame" x="115" y="0.0" width="100" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.7725490196" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Open in modal"/>
+                                        <connections>
+                                            <segue destination="T4t-JP-oWB" kind="presentation" id="7tB-mK-iDh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.6156268597963992" green="1" blue="0.92405874559712164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ECd-BT-yeW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hHb-74-oCK"/>
+                            <constraint firstItem="ECd-BT-yeW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hXy-1I-OUr"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="48.799999999999997" y="132.68365817091455"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="w5c-6g-Ehm">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Heb-kd-Os3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="bhE-tg-G31" customClass="WebViewController" customModule="WebTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5Ij-2x-a2t"/>
+                        <viewControllerLayoutGuide type="bottom" id="0af-FQ-lCc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qeL-ZQ-E03">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8ta-C1-aJE">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="t3y-jb-wqi">
+                            <connections>
+                                <action selector="backButton:" destination="bhE-tg-G31" id="s3X-7v-XbP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="containerView" destination="qeL-ZQ-E03" id="syt-9Z-003"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1735" y="133"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="YK2-Xj-23t">
+            <objects>
+                <viewController id="T4t-JP-oWB" customClass="ModalViewController" customModule="WebTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UBo-YL-zV3"/>
+                        <viewControllerLayoutGuide type="bottom" id="PBG-ve-pPm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zO0-bY-QIe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="249-j2-Mwc">
+                                <rect key="frame" x="16" y="20" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="T4t-JP-oWB" eventType="touchUpInside" id="h3H-qr-Nkv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="249-j2-Mwc" firstAttribute="top" secondItem="UBo-YL-zV3" secondAttribute="bottom" id="KyW-Mz-u3Y"/>
+                            <constraint firstItem="249-j2-Mwc" firstAttribute="leading" secondItem="zO0-bY-QIe" secondAttribute="leadingMargin" id="m11-0x-ZNx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="GR5-Dc-mpx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bc3-09-HO1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1733.5999999999999" y="873.91304347826099"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kbf-ko-dj8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZcY-36-yIT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qEk-2f-KBH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bhE-tg-G31" kind="relationship" relationship="rootViewController" id="Rah-id-wMG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vtZ-jb-HAo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="862" y="133"/>
+        </scene>
+    </scenes>
+</document>
