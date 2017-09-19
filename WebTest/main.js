@@ -11,5 +11,8 @@ setTimeout(function () {
 }, 5000);
 
 function redHeader() {
-    document.querySelector('h1').style.color = "red";
+    setTimeout(function () {
+               document.querySelector('h1').style.color = "red";
+               }, 2000);
+    
 }
