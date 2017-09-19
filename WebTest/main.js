@@ -1,6 +1,6 @@
 function callNativeApp () {
     try {
-        webkit.messageHandlers.callbackHandler.postMessage("Hello from JavaScript on the Web Page");
+        webkit.messageHandlers.callbackHandler.postMessage("Hello I'm the JavaScript on the Web Page");
     } catch(err) {
         console.log('The native context does not exist yet');
     }

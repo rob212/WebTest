@@ -46,11 +46,19 @@ class WebViewController: UIViewController, WKNavigationDelegate {
             forMainFrameOnly: true
         )
         contentController.addUserScript(userScript)
+        contentController.add(self, name: "callbackHandler")
         
         let config = WKWebViewConfiguration()
         config.userContentController = contentController
         return config
     }
-    
+}
 
+extension WebViewController: WKScriptMessageHandler {
+    
+    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+        if message.name == "callbackHandler" {
+            print("Javascript in the webView sent the message: \(message.body)")
+        }
+    }
 }
